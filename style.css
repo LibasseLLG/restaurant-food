@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@300;400;600;700&display=swap');
+/* ######
+css global
+######## */ 
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-feature-settings: 'Poppins',sans-serif;
+   list-style: none;
+   text-decoration: none;
+   scroll-padding-top: 2rem;
+   scroll-behavior: smooth;
+}
+
+:root {
+    --light-orange: rgb(233, 197, 155);
+    --dark-orange: rgb(216, 117, 3);
+    --light-red: rgb(233, 155, 155);
+    --dark-red: rgb(112, 5, 5);
+    --bg: #f1f1f1;
+    --text: rgb(24, 24, 24);
+}
+
+body{
+    color: var(--text);
+    background: var(--bg);
+}
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background: var(--light-red);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 0.5rem;
+    background: var(--dark-red);
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Mochiy Pop One',sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    padding: 5rem 0.1rem;
+}
+
+/* ######
+navigation
+######## */
+
+nav{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg);
+    padding: 20px 50px;
+    transition: 0.5s;
+    box-shadow: 0 5px 5px rgba(0, 0, 0,.2);
+}
+
+.profil{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+}
+
+.profil img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profil span{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.logo span{
+    column-gap: 0.5rem;
+}
+
+.logo .bx{
+    color: var(--dark-red);
+    font-size: 2rem;
+}
+
+.navigation{
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.navigation a{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+}
+
+.navigation a:hover,.navigation a.link-active{
+    color: var(--bg);
+    background: var(--dark-red);
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+}
+
+#burger-menu{
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+
+/* ######
+home
+######## */
+
+.slider-container{
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: no-repeat center/cover url('./images/img-bg.jpg');
+}
+
+.slider-container img{
+    width: 500px;
+    position: absolute;
+    right: 150px;
+    bottom: 0;
+}
+
+.home-txt{
+    padding: 0 150px;
+}
+.home-txt span{
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--light-red);
+}
+.home-txt h1{
+    font-size: clamp(30px,4vw,60px);
+    font-weight: 700;
+    margin: 1rem 0;
+}
+.btn{
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-red);
+    color: var(--bg);
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background.2s ease-in-out;
+}
+.btn:hover{
+    background: var(--light-red);
+}
+
+.swiper-button-next{
+    background: no-repeat center/cover url('./images/right.png');
+    margin-right: 20px;
+    background-size: 100% auto;
+}
+.swiper-button-prev {
+    background: no-repeat center/cover url('./images/left.png');
+    margin-left: 20px;
+    background-size: 100% auto;
+}
+.swiper-button-next::after,.swiper-button-prev::after{
+    display: none;
+}
